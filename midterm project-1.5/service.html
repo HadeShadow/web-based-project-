@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Restaurants by Continent</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #10cfd9;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+        .continent-section {
+            padding: 20px;
+            text-align: center;
+        }
+        .restaurant {
+            background-color: #f2f2f2;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        .restaurant img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+  
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <header class="bg-info text-white py-3">
+        <div class="container">
+            <h1 class="text-center mb-0">Top Restaurants by Continent</h1>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="service.html">Top Restaurants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact us.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="review.html">Reviews/Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript.html">Suggestion Form</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-5">
+        <div class="row">
+        
+   <div> <h2>Top Restaurants in North America</h2></div>
+            <div class="col-lg-4 mb-4">
+                <div class="restaurant">
+                    <img src="resimage/worlds-best-restaurants-le-bernardin-new-york-chef-eric-rippert-top-25-restaurants.jpg" class="card-img-top" alt="Restaurant 1">
+                    <div class="card-body">
+                        <h5 class="card-title">>Le Bernardin only served fish: fresh, simple and prepared with respect. After receiving its first Michelin star in 1976, and two more in 1980, the Le Coze’s set to open Le Bernardin in New York in 1986. After the unexpected passing of Gilbert in 1994, Maguy Le Coze began working closely with Chef Eric Ripert, a disciple and close friend of Gilbert, who took over the kitchen to continue preparing the freshest seafood with the simple philosophy that the fish is the star of the plate.</h5>
+                        <p class="card-text">155 W 51st Street New York, NY 10019 United States</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="restaurant">
+                    <img src="resimage/worlds-best-restaurants-eleven-madison-park-new-york-city-top-25-restaurants.jpg" class="card-img-top" alt="Restaurant 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Eleven Madison Park is a fine dining restaurant located in the heart of New York City. The restaurant overlooks Madison Square Park, one of the most beautiful parks in Manhattan, and sits at the base of a historic Art Deco building on the corner of East 24th Street and Madison Avenue. Located here since 1998, it underwent a full-scale renovation and redesign in the summer of 2017</h5>
+                        <p class="card-text">155 W 51st Street New York, NY 10019 United States</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="restaurant">
+                    <img src="resimage/worlds-best-restaurants-atelier-crenn-san-francisco-chef-dominique-crenn-top-25-restaurants.jpg" class="card-img-top" alt="Restaurant 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Behind an unassuming facade mere steps from the San Francisco Bay, Dominique Crenn offers various multi-course experiences in an inviting and luxurious dining room. With her father's paintings hung upon the walls and a menu in the form of a poem waiting for each guest, Atelier Crenn embodies the artistry of fine dining.</h5>
+                        <p class="card-text">3127 Fillmore Street
+                            San Francisco, CA 94123
+                            United States</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="restaurant">
+                    <img src="resimage/worlds-best-restaurants-per-se-new-york-by-thomas-keller-top-25-restaurants.jpg" class="card-img-top" alt="Restaurant 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Opened in 2004, Per Se is Thomas Keller’s acclaimed New York interpretation of The French Laundry in the Deutsche Bank Center at Columbus Circle. Designed by Adam D. Tihany, Per Se features a serene and intimate environment with spectacular views of Central Park and Columbus Circle.</h5>
+                        <p class="card-text">10 Columbus Circle, 4th Floor
+                            New York, NY 10019
+                            United States</p>
+                    </div>
+                </div>
+            </div>
+           
+
+           <div> <h2>Top Restaurants in South America</h2></div>
+            <div class="col-lg-4 mb-4">
+                <div class="restaurant">
+                    <img src="resimage/maido.jpg" class="card-img-top" alt="Restaurant 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Maido</h5>
+                        <p class="card-text">Ca. San Martín No. 399, Miraflores 15074, Peru</p>
+                    </div>
+                </div>
+            </div>
+         
+                        <div class="col-lg-4 mb-4">
+                            <div class="restaurant">
+                                <img src="resimage/don.jpg" class="card-img-top" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Don Julio’s most endearing aspect is the fact it doesn’t try to break through any culinary grounds – when it comes to Argentinian cuisine, it doesn’t mess with perfection. If you’re after fancy pants dishes combining a gazillion ingredients, Don Julio is not the place for you. If you’re travelling to Argentina and for some bizarre reason have time to only visit ONE steakhouse in the entire country, however, then this don is your don. World-class meats grilled to perfection using traditional asado techniques are paired with the most mouth-watering Argentinian wines produced. Coupled with an impressive array of traditional entrées, like beef empanadas and crispy sweetbreads, Don Julio truly epitomizes Argentinian cuisine to a T(bone).</h5>
+                                    <p class="card-text">Guatemala 4699, C1425 Cdad. Autónoma de Buenos Aires, Argentina</p>
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <div class="col-lg-4 mb-4">
+                            <div class="restaurant">
+                                <img src="resimage/central.jpg" class="card-img-top" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">As its name suggests, Central has been at the heart of this list for a number of years now, for exceptionally good reason. Chefs Virgilio Martinez and Pia León create unique dishes by continuously searching for native and new ingredients from every single corner of Peru so if you can’t travel through every single province, at least your taste-buds can. The sensational dining experience served up by Central is out of this world, the avant-garde dishes and slick presentation feasting the eyes as well as the palate. The native ingredients Central uses from the Amazon, the Andes and all the valleys in-between are so obscure, that 90% of Peruvians haven’t even heard of them. With a wild variety of colours and textures, Central’s signature dishes (like the standout piranha fish that landed Martinez in hot water with US customs earlier this year) are head-turning homages to indigenous Peruvian cooking.</h5>
+                                    <p class="card-text">Av. Pedro de Osma 301, Barranco 15063, Peru</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="restaurant">
+                                <img src="resimage/24931954.jpg" class="card-img-top" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">If there is one restaurant that ought to entice you across the border into Central America then Pujol is definitely the one. Rated Mexico’s very best restaurant for years by many publications, Pujol is a bonafide culinary institution in the capital and is credited with spearheading modern Mexican cuisine. Let’s be honest, everyone loves Mexican food yet not many consider it to be an elegant, polished cuisine. That is, until they visit Pujol. Honouring the long culinary traditions of Mexico, Pujol’s kitchen creates refined dishes that leave you salivating for more. All the old faves like tacos, mole and tamales are here…but they taste nothing like you’ve ever had before.</h5>
+                                    <p class="card-text">Tennyson 133, Polanco, Polanco IV Secc, Miguel Hidalgo, 11570 Ciudad de México, CDMX, Mexico</p>
+                                </div>
+                            </div>
+                        </div>
+                     
+                     <div><h2>Top Restaurants in Europe</h2></div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="restaurant">
+                                <img src="resimage/london-best-restaurants-pavyllon-at-fourseasons-park-lane-at-top-25-restaurants-london.jpg" class="card-img-top" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">At Pavyllon London, the acclaimed French Chef Yannick Alléno and his dedicated team, led by Head Chef Benjamin, orchestrate a culinary symphony inspired by the bounty of seasonal British produce and global gastronomic traditions. Nestled within the vibrant ambiance of our restaurant, guests are treated to a unique interactive dining experience.</h5>
+                                    <p class="card-text">Four Seasons Hotel at Park Lane
+                                        London, England W1J 7DR
+                                        United Kingdom</p>
+                                </div>
+                            </div>
+                        </div>
+                     
+
+                        <div class="col-lg-4 mb-4">
+                            <div class="restaurant">
+                                <img src="resimage/worlds-best-restaurants-arpege-paris-chef-alain-passard-vegetarian-top-25-restaurants.jpg"  class="card-img-top" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Awarded 3 Michelin stars, Alain Ducasse at The Dorchester. Offers unrivalled contemporary French cuisine and impeccable service. A modern, light and elegantly informal setting complements the restaurant’s forward-thinking approach to haute cuisine</h5>
+                                    <p class="card-text">The Dorchester
+                                        53 Park Lane
+                                        London W1K 1QA, United Kingdom</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="restaurant">
+                                <img src="resimage/worlds-best-restaurants-alain-ducasse-at-the-dorchester-london-top25-restaurants.jpg" class="card-img-top" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">At Arpège you will enjoy haute cuisine focused on vegetables in a sophisticated, modern room. The restaurant Arpège is located near Invalides. Chef Alain Passard gives vegetables pride of place, every ingredient comes with its own passport and provenance, and he know the experts behind all products: gardeners, cheese makers, livestock breeders, fisherman, etc. Try Beyond beets and rice, a beetroot sushi with roasted radish, kalamata oil and mustard and it's executed magnificently.</h5>
+                                    <p class="card-text">84, rue de Varenne
+                                        75007 Paris
+                                        France</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 mb-4">
+                            <div class="restaurant">
+                                <img src="resimage/worlds-best-restaurant-geranium-copenhagen_denmark.jpg" class="card-img-top" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Geranium’s kitchen is lucid, light and dynamic. Our mission is to create meals that involve all our senses - restores, challenges and enriches. "Dynamic means force and stands for the living formative forces of nature. These forces are not visible, but their biologic "footprints" are. The effects can be seen if one learns to observe and understand the connections between the formative forces and the physical matter of all organisms".</h5>
+                                    <p class="card-text">Per Henrik Lings Allé 4 8
+                                        DK-2100 Copenhagen Ø
+                                        Denmark</p>
+                                </div>
+                            </div>
+                        </div>
+                     
+
+
+
+                  <div><h2>Top Restaurants in Asia</h2></div>
+
+                        <div class="col-lg-4 mb-4">
+                            <div class="restaurant">
+                                <img src="resimage/world-best-restaurants-narisawa-tokyo-at-top-25-restaurants.jpg" class="card-img-top" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Forests comprise almost 70% of Japan. Its coastline is ranked 6th in the world. Japan is surrounded by forests and seas. In this limited space, people cultivate the land and grow rice, they live and work hand in hand with nature, with the forests and seas, and they call this type of place the Satoyama. Responding to the four seasons, the severe changes between them, understanding this environment, and living our lives taking only the most necessary resources for daily life from the earth: this lifestyle is called Satoyama Culture.</h5>
+                                    <p class="card-text">
+                                        Minami Aoyama 2-6-15
+                                        Minato-ku Tokyo
+                                        Japan</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="restaurant">
+                                <img src="resimage/worlds-best-restaurant-leffervescence-tokyo.jpg"  class="card-img-top" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Flavors we adore from this island where we were born and raised, and savors that have travelled from all over the world to see us. Both are somehow destined to meet on the plate. We come together to create a harmonious whole. Our restaurant is a hermitage in the city, we hope you can escape from busy bustling life. Feel like you are deep in the forest or in the big ocean as you appreciate the blessings of nature. Never forgetting the diligence and patience of the farmer, picture the magic of the invisible microorganisms in a glass or on a plate that effervesce your body and mind..</h5>
+                                    <p class="card-text">2-26-4 nishiazabu
+                                        Minato-ku Tokyo
+                                        Japan</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="restaurant">
+                                <img src="resimage/world-best-restaurants-joel-robuchon-tokyo-japan-top-25-restaurants.jpg" class="card-img-top" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cooking is an act of Love, because we experience it first for the approval of those likely to discover it. This is why music, like painting, like everything that is beautiful, is a demanding Art which supposes on our side, a regularity, a concern which is comforted only by the massage of Love that it brought. If music transports us in a message of love, if painting brings us together in universal admiration, cooking must lead to a similar attitude in us. Enjoy your meal!.</h5>
+                                    <p class="card-text">1 Chome-13-1 Yebisu Garden Place
+                                        153-0062 Tokyo Meguro City Mita
+                                        Japan</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="restaurant">
+                                <img src="resimage/world-best-restaurant-singapore-odetter-at-top-25-restaurants.jpg" class="card-img-top" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Elegance and respect in a historic, colonial-era building coupled with impeccably French cuisine makes Odette one of the most exciting culinary destination in Singapore. Chef Julien had already earned a stellar reputation in Singapore for his French cuisine, and this venture is in cooperation with hospitality specialist the Lo & Behold Group.</h5>
+                                    <p class="card-text">National Gallery Singapore
+                                        1 St Andrew’s Road #01-04
+                                        Singapore 178957</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

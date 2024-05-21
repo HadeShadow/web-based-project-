@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Restaurants Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #10cfd9;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li a.active {
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top Restaurants in the World</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about us.html">About Us</a></li>
+                <li><a href="service.html">Top Restaurants</a></li>
+                <li><a href="Contact us.html">Contact</a></li>
+                <li><a href="review.html">Reviews/Feedback</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="javascript.html">Suggestion Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container my-4">
+        <h1 class="text-center">Form page to help in recommending suitable restaurants</h1>
+        <div id="datetime" class="text-center mb-4"></div>
+        <form id="restaurantForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+                <div class="error" id="nameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <div class="error" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" min="23" max="100" required>
+                <div class="error" id="ageError"></div>
+            </div>
+            <div class="form-group">
+                <label for="income">Income</label>
+                <input type="number" class="form-control" id="income" name="income" required>
+                <div class="error" id="incomeError"></div>
+            </div>
+            <div class="form-group">
+                <label>Favorite Cuisine</label><br>
+                <input type="radio" id="cuisine1" name="cuisine" value="Italian" required> Italian<br>
+                <input type="radio" id="cuisine2" name="cuisine" value="Chinese"> Chinese<br>
+                <input type="radio" id="cuisine3" name="cuisine" value="Mexican"> Mexican<br>
+                <input type="radio" id="cuisine4" name="cuisine" value="Indian"> Indian<br>
+                <div class="error" id="cuisineError"></div>
+            </div>
+            <div class="form-group">
+                <label>Preferred Meal Times</label><br>
+                <input type="checkbox" id="meal1" name="meal" value="Breakfast"> Breakfast<br>
+                <input type="checkbox" id="meal2" name="meal" value="Lunch"> Lunch<br>
+                <input type="checkbox" id="meal3" name="meal" value="Dinner"> Dinner<br>
+                <div class="error" id="mealError"></div>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments</label>
+                <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div id="report" class="mt-4"></div>
+    </div>
+
+
+
+    <script>
+
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeStr = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+            document.getElementById('datetime').innerText = dateTimeStr;
+        }
+        setInterval(updateDateTime, 1000);
+
+        document.getElementById('restaurantForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            let isValid = true;
+
+
+            document.querySelectorAll('.error').forEach(el => el.innerText = '');
+
+            const name = document.getElementById('name').value;
+            if (name === '') {
+                isValid = false;
+                document.getElementById('nameError').innerText = 'Name is required.';
+            }
+
+     
+            const email = document.getElementById('email').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                isValid = false;
+                document.getElementById('emailError').innerText = 'Invalid email address.';
+            }
+
+    
+            const age = parseInt(document.getElementById('age').value);
+            if (isNaN(age) || age < 23 || age > 100) {
+                isValid = false;
+                document.getElementById('ageError').innerText = 'Age must be between 23 and 100.';
+            }
+
+            const income = parseFloat(document.getElementById('income').value);
+            if (isNaN(income) || income <= 0) {
+                isValid = false;
+                document.getElementById('incomeError').innerText = 'Income must be a positive number.';
+            }
+
+    
+            const cuisine = document.querySelector('input[name="cuisine"]:checked');
+            if (!cuisine) {
+                isValid = false;
+                document.getElementById('cuisineError').innerText = 'Please select a favorite cuisine.';
+            }
+
+            const meals = document.querySelectorAll('input[name="meal"]:checked');
+            if (meals.length === 0) {
+                isValid = false;
+                document.getElementById('mealError').innerText = 'Please select at least one preferred meal time.';
+            }
+
+            if (isValid) {
+    
+                const comments = document.getElementById('comments').value;
+                let report = `
+                    <h2>Submitted Information</h2>
+                    <p><strong>Name:</strong> ${name}</p>
+                    <p><strong>Email:</strong> ${email}</p>
+                    <p><strong>Age:</strong> ${age}</p>
+                    <p><strong>Income:</strong> ${income}</p>
+                    <p><strong>Favorite Cuisine:</strong> ${cuisine.value}</p>
+                    <p><strong>Preferred Meal Times:</strong> ${Array.from(meals).map(m => m.value).join(', ')}</p>
+                    <p><strong>Comments:</strong> ${comments}</p>
+                `;
+                document.getElementById('report').innerHTML = report;
+            }
+        });
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
